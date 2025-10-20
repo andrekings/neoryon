@@ -5,38 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neoryon | Inteligência Artificial para SRE e DevOps</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
     body {
       background-color: #000022;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke-opacity='0.5'%3E%3Cg stroke='%23026' stroke-width='17'%3E%3Cline x1='-8' y1='-8' x2='808' y2='808'/%3E%3Cline x1='-8' y1='792' x2='808' y2='1608'/%3E%3Cline x1='-8' y1='-808' x2='808' y2='8'/%3E%3C/g%3E%3Cg stroke='%23002163' stroke-width='16'%3E%3Cline x1='-8' y1='767' x2='808' y2='1583'/%3E%3Cline x1='-8' y1='17' x2='808' y2='833'/%3E%3Cline x1='-8' y1='-33' x2='808' y2='783'/%3E%3Cline x1='-8' y1='-783' x2='808' y2='33'/%3E%3C/g%3E%3Cg stroke='%23002060' stroke-width='15'%3E%3Cline x1='-8' y1='742' x2='808' y2='1558'/%3E%3Cline x1='-8' y1='42' x2='808' y2='858'/%3E%3Cline x1='-8' y1='-58' x2='808' y2='758'/%3E%3Cline x1='-8' y1='-758' x2='808' y2='58'/%3E%3C/g%3E%3Cg stroke='%23001f5c' stroke-width='14'%3E%3Cline x1='-8' y1='67' x2='808' y2='883'/%3E%3Cline x1='-8' y1='717' x2='808' y2='1533'/%3E%3Cline x1='-8' y1='-733' x2='808' y2='83'/%3E%3Cline x1='-8' y1='-83' x2='808' y2='733'/%3E%3C/g%3E%3Cg stroke='%23001e59' stroke-width='13'%3E%3Cline x1='-8' y1='92' x2='808' y2='908'/%3E%3Cline x1='-8' y1='692' x2='808' y2='1508'/%3E%3Cline x1='-8' y1='-108' x2='808' y2='708'/%3E%3Cline x1='-8' y1='-708' x2='808' y2='108'/%3E%3C/g%3E%3Cg stroke='%23001d56' stroke-width='12'%3E%3Cline x1='-8' y1='667' x2='808' y2='1483'/%3E%3Cline x1='-8' y1='117' x2='808' y2='933'/%3E%3Cline x1='-8' y1='-133' x2='808' y2='683'/%3E%3Cline x1='-8' y1='-683' x2='808' y2='133'/%3E%3C/g%3E%3Cg stroke='%23001c53' stroke-width='11'%3E%3Cline x1='-8' y1='642' x2='808' y2='1458'/%3E%3Cline x1='-8' y1='142' x2='808' y2='958'/%3E%3Cline x1='-8' y1='-158' x2='808' y2='658'/%3E%3Cline x1='-8' y1='-658' x2='808' y2='158'/%3E%3C/g%3E%3Cg stroke='%23001b4f' stroke-width='10'%3E%3Cline x1='-8' y1='167' x2='808' y2='983'/%3E%3Cline x1='-8' y1='617' x2='808' y2='1433'/%3E%3Cline x1='-8' y1='-633' x2='808' y2='183'/%3E%3Cline x1='-8' y1='-183' x2='808' y2='633'/%3E%3C/g%3E%3Cg stroke='%23001a4c' stroke-width='9'%3E%3Cline x1='-8' y1='592' x2='808' y2='1408'/%3E%3Cline x1='-8' y1='192' x2='808' y2='1008'/%3E%3Cline x1='-8' y1='-608' x2='808' y2='208'/%3E%3Cline x1='-8' y1='-208' x2='808' y2='608'/%3E%3C/g%3E%3Cg stroke='%23001949' stroke-width='8'%3E%3Cline x1='-8' y1='567' x2='808' y2='1383'/%3E%3Cline x1='-8' y1='217' x2='808' y2='1033'/%3E%3Cline x1='-8' y1='-233' x2='808' y2='583'/%3E%3Cline x1='-8' y1='-583' x2='808' y2='233'/%3E%3C/g%3E%3Cg stroke='%23001846' stroke-width='7'%3E%3Cline x1='-8' y1='242' x2='808' y2='1058'/%3E%3Cline x1='-8' y1='542' x2='808' y2='1358'/%3E%3Cline x1='-8' y1='-558' x2='808' y2='258'/%3E%3Cline x1='-8' y1='-258' x2='808' y2='558'/%3E%3C/g%3E%3Cg stroke='%23001743' stroke-width='6'%3E%3Cline x1='-8' y1='267' x2='808' y2='1083'/%3E%3Cline x1='-8' y1='517' x2='808' y2='1333'/%3E%3Cline x1='-8' y1='-533' x2='808' y2='283'/%3E%3Cline x1='-8' y1='-283' x2='808' y2='533'/%3E%3C/g%3E%3Cg stroke='%2300163f' stroke-width='5'%3E%3Cline x1='-8' y1='292' x2='808' y2='1108'/%3E%3Cline x1='-8' y1='492' x2='808' y2='1308'/%3E%3Cline x1='-8' y1='-308' x2='808' y2='508'/%3E%3Cline x1='-8' y1='-508' x2='808' y2='308'/%3E%3C/g%3E%3Cg stroke='%2300153c' stroke-width='4'%3E%3Cline x1='-8' y1='467' x2='808' y2='1283'/%3E%3Cline x1='-8' y1='317' x2='808' y2='1133'/%3E%3Cline x1='-8' y1='-333' x2='808' y2='483'/%3E%3Cline x1='-8' y1='-483' x2='808' y2='333'/%3E%3C/g%3E%3Cg stroke='%23001439' stroke-width='3'%3E%3Cline x1='-8' y1='342' x2='808' y2='1158'/%3E%3Cline x1='-8' y1='442' x2='808' y2='1258'/%3E%3Cline x1='-8' y1='-458' x2='808' y2='358'/%3E%3Cline x1='-8' y1='-358' x2='808' y2='458'/%3E%3C/g%3E%3Cg stroke='%23001336' stroke-width='2'%3E%3Cline x1='-8' y1='367' x2='808' y2='1183'/%3E%3Cline x1='-8' y1='417' x2='808' y2='1233'/%3E%3Cline x1='-8' y1='-433' x2='808' y2='383'/%3E%3Cline x1='-8' y1='-383' x2='808' y2='433'/%3E%3C/g%3E%3Cg stroke='%23013' stroke-width='1'%3E%3Cline x1='-8' y1='392' x2='808' y2='1208'/%3E%3Cline x1='-8' y1='-408' x2='808' y2='408'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke-opacity='0.23'%3E%3Cg stroke='%23026' stroke-width='17'%3E%3Cline x1='-8' y1='-8' x2='808' y2='808'/%3E%3Cline x1='-8' y1='792' x2='808' y2='1608'/%3E%3Cline x1='-8' y1='-808' x2='808' y2='8'/%3E%3C/g%3E%3Cg stroke='%23002163' stroke-width='16'%3E%3Cline x1='-8' y1='767' x2='808' y2='1583'/%3E%3Cline x1='-8' y1='17' x2='808' y2='833'/%3E%3Cline x1='-8' y1='-33' x2='808' y2='783'/%3E%3Cline x1='-8' y1='-783' x2='808' y2='33'/%3E%3C/g%3E%3Cg stroke='%23002060' stroke-width='15'%3E%3Cline x1='-8' y1='742' x2='808' y2='1558'/%3E%3Cline x1='-8' y1='42' x2='808' y2='858'/%3E%3Cline x1='-8' y1='-58' x2='808' y2='758'/%3E%3Cline x1='-8' y1='-758' x2='808' y2='58'/%3E%3C/g%3E%3Cg stroke='%23001f5c' stroke-width='14'%3E%3Cline x1='-8' y1='67' x2='808' y2='883'/%3E%3Cline x1='-8' y1='717' x2='808' y2='1533'/%3E%3Cline x1='-8' y1='-733' x2='808' y2='83'/%3E%3Cline x1='-8' y1='-83' x2='808' y2='733'/%3E%3C/g%3E%3Cg stroke='%23001e59' stroke-width='13'%3E%3Cline x1='-8' y1='92' x2='808' y2='908'/%3E%3Cline x1='-8' y1='692' x2='808' y2='1508'/%3E%3Cline x1='-8' y1='-108' x2='808' y2='708'/%3E%3Cline x1='-8' y1='-708' x2='808' y2='108'/%3E%3C/g%3E%3Cg stroke='%23001d56' stroke-width='12'%3E%3Cline x1='-8' y1='667' x2='808' y2='1483'/%3E%3Cline x1='-8' y1='117' x2='808' y2='933'/%3E%3Cline x1='-8' y1='-133' x2='808' y2='683'/%3E%3Cline x1='-8' y1='-683' x2='808' y2='133'/%3E%3C/g%3E%3Cg stroke='%23001c53' stroke-width='11'%3E%3Cline x1='-8' y1='642' x2='808' y2='1458'/%3E%3Cline x1='-8' y1='142' x2='808' y2='958'/%3E%3Cline x1='-8' y1='-158' x2='808' y2='658'/%3E%3Cline x1='-8' y1='-658' x2='808' y2='158'/%3E%3C/g%3E%3Cg stroke='%23001b4f' stroke-width='10'%3E%3Cline x1='-8' y1='167' x2='808' y2='983'/%3E%3Cline x1='-8' y1='617' x2='808' y2='1433'/%3E%3Cline x1='-8' y1='-633' x2='808' y2='183'/%3E%3Cline x1='-8' y1='-183' x2='808' y2='633'/%3E%3C/g%3E%3Cg stroke='%23001a4c' stroke-width='9'%3E%3Cline x1='-8' y1='592' x2='808' y2='1408'/%3E%3Cline x1='-8' y1='192' x2='808' y2='1008'/%3E%3Cline x1='-8' y1='-608' x2='808' y2='208'/%3E%3Cline x1='-8' y1='-208' x2='808' y2='608'/%3E%3C/g%3E%3Cg stroke='%23001949' stroke-width='8'%3E%3Cline x1='-8' y1='567' x2='808' y2='1383'/%3E%3Cline x1='-8' y1='217' x2='808' y2='1033'/%3E%3Cline x1='-8' y1='-233' x2='808' y2='583'/%3E%3Cline x1='-8' y1='-583' x2='808' y2='233'/%3E%3C/g%3E%3Cg stroke='%23001846' stroke-width='7'%3E%3Cline x1='-8' y1='242' x2='808' y2='1058'/%3E%3Cline x1='-8' y1='542' x2='808' y2='1358'/%3E%3Cline x1='-8' y1='-558' x2='808' y2='258'/%3E%3Cline x1='-8' y1='-258' x2='808' y2='558'/%3E%3C/g%3E%3Cg stroke='%23001743' stroke-width='6'%3E%3Cline x1='-8' y1='267' x2='808' y2='1083'/%3E%3Cline x1='-8' y1='517' x2='808' y2='1333'/%3E%3Cline x1='-8' y1='-533' x2='808' y2='283'/%3E%3Cline x1='-8' y1='-283' x2='808' y2='533'/%3E%3C/g%3E%3Cg stroke='%2300163f' stroke-width='5'%3E%3Cline x1='-8' y1='292' x2='808' y2='1108'/%3E%3Cline x1='-8' y1='492' x2='808' y2='1308'/%3E%3Cline x1='-8' y1='-308' x2='808' y2='508'/%3E%3Cline x1='-8' y1='-508' x2='808' y2='308'/%3E%3C/g%3E%3Cg stroke='%2300153c' stroke-width='4'%3E%3Cline x1='-8' y1='467' x2='808' y2='1283'/%3E%3Cline x1='-8' y1='317' x2='808' y2='1133'/%3E%3Cline x1='-8' y1='-333' x2='808' y2='483'/%3E%3Cline x1='-8' y1='-483' x2='808' y2='333'/%3E%3C/g%3E%3Cg stroke='%23001439' stroke-width='3'%3E%3Cline x1='-8' y1='342' x2='808' y2='1158'/%3E%3Cline x1='-8' y1='442' x2='808' y2='1258'/%3E%3Cline x1='-8' y1='-458' x2='808' y2='358'/%3E%3Cline x1='-8' y1='-358' x2='808' y2='458'/%3E%3C/g%3E%3Cg stroke='%23001336' stroke-width='2'%3E%3Cline x1='-8' y1='367' x2='808' y2='1183'/%3E%3Cline x1='-8' y1='417' x2='808' y2='1233'/%3E%3Cline x1='-8' y1='-433' x2='808' y2='383'/%3E%3Cline x1='-8' y1='-383' x2='808' y2='433'/%3E%3C/g%3E%3Cg stroke='%23013' stroke-width='1'%3E%3Cline x1='-8' y1='392' x2='808' y2='1208'/%3E%3Cline x1='-8' y1='-408' x2='808' y2='408'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       background-attachment: fixed;
       background-size: cover;
       color: #f5f5f5;
       line-height: 1.6;
     }
-    header {
-      text-align: center;
-      padding: 100px 20px 80px;
+
+    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
-    header h1 {
-      font-size: 2.8rem;
+
+    h2 {
+      font-size: 2.2rem;
       color: #00aaff;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
+      text-align: center;
+      margin-bottom: 20px;
     }
+
+    p, a, li, div {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #d6d6d6;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    header.hidden {
+      opacity: 0;
+      transform: translateY(-40px);
+      pointer-events: none;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: #00aaff;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
     header p {
       font-size: 1.3rem;
       color: #bbb;
       max-width: 700px;
-      margin: 0 auto 30px;
+      margin-bottom: 40px;
     }
+
     .btns {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
     }
+
     .btn {
       padding: 12px 28px;
       border-radius: 8px;
@@ -48,34 +90,53 @@
       text-decoration: none;
       font-weight: 600;
     }
+
     .btn:hover {
       background: #00aaff;
       color: #fff;
       transform: translateY(-3px);
     }
+
     section {
-      padding: 80px 20px;
+      display: none;
+      padding: 100px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease;
+      text-align: center;
     }
-    section h2 {
-      color: #00aaff;
-      font-size: 2rem;
+
+    section.active {
+      display: block;
+    }
+
+    /* ✨ Centralizar verticalmente o contato */
+    #contato {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    #contato p {
+      max-width: 600px;
       margin-bottom: 20px;
-      text-align: center;
     }
-    section p {
-      color: #ccc;
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.1rem;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
+
     .card {
       background: #0f1117;
       border: 1px solid #1b1f29;
@@ -84,10 +145,21 @@
       text-align: center;
       transition: all 0.3s;
     }
+
     .card:hover {
       border-color: #00aaff;
       transform: translateY(-5px);
     }
+
+    #ayla img {
+      transition: all 0.3s ease;
+    }
+
+    #ayla img:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 14px #00aaff);
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -96,17 +168,20 @@
       color: #777;
       font-size: 0.9rem;
     }
+
     @media (max-width: 600px) {
-      header h1 { font-size: 2.1rem; }
+      header h1 { font-size: 2.3rem; }
       header p { font-size: 1rem; }
     }
   </style>
 </head>
+
 <body>
-  <header>
+  <header id="mainHeader">
     <h1>NEORYON</h1>
     <p>Inteligência Artificial para Observabilidade, SRE e Resiliência Digital.</p>
     <div class="btns">
+      <a href="#sobre" class="btn">Sobre a Neoryon</a>
       <a href="#ayla" class="btn">Conheça a AYLA</a>
       <a href="#contato" class="btn">Fale com o time técnico</a>
     </div>
@@ -115,46 +190,95 @@
   <section id="sobre">
     <h2>Sobre a Neoryon</h2>
     <p>
-      A Neoryon é uma startup de Inteligência Artificial aplicada à Engenharia de Confiabilidade.
-      Nosso foco é criar agentes autônomos que transformam a forma como empresas monitoram, analisam e reagem a incidentes.
+      A Neoryon é uma empresa de tecnologia especializada em Inteligência Artificial aplicada à confiabilidade e operação de sistemas digitais.  
+      Nossa missão é desenvolver soluções que tornem a tecnologia mais autônoma, preditiva e resiliente.  
+      Entre nossas inovações está a <strong>AYLA</strong>, uma plataforma cognitiva avançada que redefine a observabilidade e a engenharia de confiabilidade em ambientes complexos.  
     </p>
-    <div class="cards">
-      <div class="card">🔍 Observabilidade Inteligente</div>
-      <div class="card">⚙️ Correlação Multi-Cloud</div>
-      <div class="card">🧠 Root Cause Analysis com LLMs</div>
-      <div class="card">🤖 Automação de Respostas (AIOps)</div>
+    <div style="text-align:center; color:#00aaff; margin-top:20px; font-size:1.1rem;">
+      “A Neoryon acredita que a verdadeira inteligência surge quando sistemas aprendem a cuidar de si mesmos.”
+    </div>
+    <div class="cards" style="margin-top:40px;">
+      <div class="card">🔍 Inteligência aplicada à confiabilidade</div>
+      <div class="card">⚙️ Soluções cognitivas para ecossistemas complexos</div>
+      <div class="card">🧠 Pesquisa contínua em IA e automação</div>
+      <div class="card">🤖 Desenvolvimento de plataformas autônomas</div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="#" class="btn">Voltar ao Início</a>
     </div>
   </section>
 
   <section id="ayla">
-    <h2>AYLA — Agente de Observabilidade</h2>
+    <div style="text-align:center; margin-bottom:25px;">
+      <img src="images/ayla-logo-blue.png" alt="AYLA Logo" width="140" style="filter: drop-shadow(0 0 8px #00aaff);">
+    </div>    
+    <h2>AYLA — Uma Plataforma Cognitiva de Observabilidade.</h2>
+    <p style="color:#00aaff; text-align:center; margin-bottom: 10px;">
+      IA autônoma. Observabilidade sem fronteiras. Aprendizado contínuo. Ação proativa. Confiabilidade elevada.
+    </p>
     <p>
-      AYLA é a IA oracular da Neoryon — um agente que entende logs, métricas e eventos de sistemas complexos, gerando insights e ações automatizadas.
+      AYLA é a inteligência da Neoryon, criada para elevar a observabilidade a um novo patamar de autonomia e precisão.  
+      Baseada em modelos proprietários de aprendizado adaptativo, AYLA compreende e correlaciona eventos, métricas e logs em tempo real — 
+      antecipando anomalias e sugerindo ações antes que impactos ocorram.  
+      Totalmente independente de stacks de observabilidade específicas, a AYLA integra-se de forma nativa a qualquer ecossistema,
+      conectando-se perfeitamente a soluções como Prometheus, Datadog, Grafana, Elastic, New Relic ou Splunk.
     </p>
     <div class="cards">
-      <div class="card">🔗 Integração com Prometheus, Grafana e Kafka</div>
-      <div class="card">💬 Insights em linguagem natural</div>
-      <div class="card">📈 Alertas proativos no Teams / Slack</div>
-      <div class="card">🔄 Aprendizado contínuo do ambiente</div>
+      <div class="card">🔗 Integração com Stacks e Ecossistemas de Observabilidade</div>
+      <div class="card">💬 Análises e Insights em linguagem natural</div>
+      <div class="card">📈 Alertas inteligentes e proativos para múltiplos canais</div>
+      <div class="card">🔄 Aprendizado contínuo e adaptação autônoma ao ambiente</div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="#" class="btn">Voltar ao Início</a>
     </div>
   </section>
 
-  <section id="missao">
-    <h2>Missão e Visão</h2>
-    <p>
-      Nossa missão é tornar sistemas complexos mais humanos — e humanos mais produtivos.<br/>
-      Acreditamos que a próxima era da confiabilidade será liderada pela IA.
-    </p>
-  </section>
-
+  <!-- 🔧 SECTION DE CONTATO CENTRALIZADA -->
   <section id="contato">
     <h2>Contato</h2>
     <p>Quer testar a AYLA ou conversar sobre Observabilidade Inteligente?</p>
     <p>📩 <a href="mailto:neoryon@neoryon.com" style="color:#00aaff;text-decoration:none;">neoryon@neoryon.com</a></p>
+    <div style="margin-top:40px;">
+      <a href="#" class="btn">Voltar ao Início</a>
+    </div>
   </section>
 
   <footer>
     © 2025 Neoryon — Inteligência Artificial para Observabilidade.
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const header = document.getElementById("mainHeader");
+      const sections = document.querySelectorAll("section");
+
+      document.querySelectorAll(".btn").forEach(button => {
+        button.addEventListener("click", function(event) {
+          const targetId = this.getAttribute("href").substring(1);
+          if (!targetId) return;
+          event.preventDefault();
+
+          header.classList.add("hidden");
+          sections.forEach(sec => sec.classList.remove("active"));
+
+          const target = document.getElementById(targetId);
+          if (target) {
+            target.classList.add("active");
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      document.querySelectorAll('a[href="#"]').forEach(backBtn => {
+        backBtn.addEventListener("click", e => {
+          e.preventDefault();
+          sections.forEach(sec => sec.classList.remove("active"));
+          header.classList.remove("hidden");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
