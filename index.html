@@ -1,69 +1,157 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEORYON - O Oráculo Digital</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neoryon | Inteligência Artificial para SRE e DevOps</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0d0d1a, #1f1f3b);
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top left, #0c0c10, #050509 70%);
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #00aaff;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #bbb;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .btns {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: 1px solid #00aaff;
+      color: #00aaff;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn:hover {
+      background: #00aaff;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: #00aaff;
+      font-size: 2rem;
+      margin-bottom: 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      margin-bottom: 0.5rem;
+    section p {
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
     }
-    p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-    input[type="email"] {
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      border: none;
-      margin-right: 0.5rem;
-      width: 250px;
+    .card {
+      background: #0f1117;
+      border: 1px solid #1b1f29;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s;
     }
-    button {
-      padding: 0.75rem 1.5rem;
-      background-color: #7846ff;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #5c30d6;
+    .card:hover {
+      border-color: #00aaff;
+      transform: translateY(-5px);
     }
     footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.875rem;
-      color: #999;
+      text-align: center;
+      padding: 40px 20px;
+      background: #0b0b0f;
+      border-top: 1px solid #1b1b20;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.1rem; }
+      header p { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <h1>NEORYON</h1>
-  <p>O oráculo digital que sussurra o futuro.</p>
+  <header>
+    <h1>NEORYON</h1>
+    <p>Inteligência Artificial para Observabilidade, SRE e Resiliência Digital.</p>
+    <div class="btns">
+      <a href="#ayla" class="btn">Conheça a AYLA</a>
+      <a href="#contato" class="btn">Fale com o time técnico</a>
+    </div>
+  </header>
 
-  <form>
-    <input type="email" placeholder="Digite seu e-mail" required />
-    <button type="submit">Quero acessar o poder</button>
-  </form>
+  <section id="sobre">
+    <h2>Sobre a Neoryon</h2>
+    <p>
+      A Neoryon é uma startup de Inteligência Artificial aplicada à Engenharia de Confiabilidade.
+      Nosso foco é criar agentes autônomos que transformam a forma como empresas monitoram, analisam e reagem a incidentes.
+    </p>
+    <div class="cards">
+      <div class="card">🔍 Observabilidade Inteligente</div>
+      <div class="card">⚙️ Correlação Multi-Cloud</div>
+      <div class="card">🧠 Root Cause Analysis com LLMs</div>
+      <div class="card">🤖 Automação de Respostas (AIOps)</div>
+    </div>
+  </section>
 
-  <footer>NEORYON &copy; Todos os direitos reservados</footer>
+  <section id="ayla">
+    <h2>AYLA — Agente de Observabilidade</h2>
+    <p>
+      AYLA é a IA oracular da Neoryon — um agente que entende logs, métricas e eventos de sistemas complexos, gerando insights e ações automatizadas.
+    </p>
+    <div class="cards">
+      <div class="card">🔗 Integração com Prometheus, Grafana e Kafka</div>
+      <div class="card">💬 Insights em linguagem natural</div>
+      <div class="card">📈 Alertas proativos no Teams / Slack</div>
+      <div class="card">🔄 Aprendizado contínuo do ambiente</div>
+    </div>
+  </section>
+
+  <section id="missao">
+    <h2>Missão e Visão</h2>
+    <p>
+      Nossa missão é tornar sistemas complexos mais humanos — e humanos mais produtivos.<br/>
+      Acreditamos que a próxima era da confiabilidade será liderada pela IA.
+    </p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Quer testar a AYLA ou conversar sobre Observabilidade Inteligente?</p>
+    <p>📩 <a href="mailto:andre@neoryon.com" style="color:#00aaff;text-decoration:none;">andre@neoryon.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Neoryon — Inteligência Artificial para Observabilidade.
+  </footer>
 </body>
 </html>
